@@ -1,4 +1,4 @@
-$ResoniteLocation = (Get-ChildItem -Path(
+﻿$ResoniteLocation = (Get-ChildItem -Path(
 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall',
 'HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall') | % { Get-ItemProperty $_.PsPath } | ?{ $_.DisplayName -eq 'Resonite' }).InstallLocation
 
