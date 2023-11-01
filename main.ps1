@@ -3,7 +3,7 @@
 'HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall') | % { Get-ItemProperty $_.PsPath } | ?{ $_.DisplayName -eq 'Resonite' }).InstallLocation
 
 if([string]::IsNullOrEmpty($ResoniteLocation)){
-  "Not found Resonite Install location. / Resoniteのインストール場所が見つかりませんでした。"
+  "Not found Resonite Install location."
   exit
 }
 
